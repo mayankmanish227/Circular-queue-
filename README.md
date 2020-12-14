@@ -1,4 +1,4 @@
-# Circular-queue-
+
 package com;
 
 public class day2
@@ -6,27 +6,27 @@ public class day2
 	public static void main(String []args)
 	{
 		day2 obj=new day2();
-		insert(5);
-		insert(6);
-		insert(7);
-		insert(8);
-		insert(9);
-		delete();
-		delete();
-		delete();
-		insert(1);
-		insert(2);
-		insert(3);
-		insert(4);
-		display();
+		obj.insert(5);
+		obj.insert(6);
+		obj.insert(7);
+		obj.insert(8);
+		obj.insert(9);
+		obj.delete();
+		obj.delete();
+		obj.delete();
+		obj.insert(1);
+		obj.insert(2);
+		obj.insert(3);
+		obj.insert(4);
+		obj.display();
 	}
-	static int size=6;
-	static int[] arr=new int[size];
-	static int rear=-1;
-	static int front=-1;
+	 int size=6;
+	 int[] arr=new int[size];
+	 int rear=-1;
+	 int front=-1;
 	
 
-	static void insert(int ele)
+	void insert(int ele)
 	{
 		if((front==0 && rear==size-1) || (front==rear+1))
 		{
@@ -48,7 +48,7 @@ public class day2
 			arr[rear]=ele;
 		}
 	}
-	static void delete()
+	 void delete()
 	{
 		if(front==-1 && rear==-1)
 		{
@@ -68,7 +68,7 @@ public class day2
 			front++;
 		}
 	}
-	static void display()
+	 void display()
 	{
 		if(front==-1 && rear==-1)
 		{
